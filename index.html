@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Happy Friendship Day ❤️ — Tanu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= CANVASES / AMBIENT LAYERS ================= -->
+<canvas id="sky-canvas"></canvas>
+<div id="cursor-glow"></div>
+<div id="heart-trail-layer"></div>
+<div id="firefly-layer"></div>
+
+<!-- ================= SECTION 0 — LOADER ================= -->
+<section id="loader">
+  <div class="loader-sky">
+    <div class="loader-moon"></div>
+    <div class="loader-stars"></div>
+  </div>
+  <div class="loader-hearts">
+    <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+  </div>
+  <div class="loader-content">
+    <p id="loader-type" class="loader-text"></p>
+    <p class="tap-hint">Tap Anywhere</p>
+  </div>
+</section>
+
+<!-- ================= MAIN EXPERIENCE ================= -->
+<main id="experience" hidden>
+
+  <!-- floating nav dots -->
+  <nav id="section-dots" aria-hidden="true">
+    <span data-target="welcome"></span>
+    <span data-target="eyes"></span>
+    <span data-target="letter"></span>
+    <span data-target="saree"></span>
+    <span data-target="words"></span>
+    <span data-target="why"></span>
+    <span data-target="finale"></span>
+  </nav>
+
+  <!-- ============ SECTION 2 — WELCOME ============ -->
+  <section id="welcome" class="section">
+    <div class="glass-card welcome-card" data-aos="zoom-in">
+      <p class="eyebrow">Happy Friendship Day ❤️</p>
+      <h1 class="name-typing" id="name-type"></h1>
+      <p class="poetic-line">
+        काही माणसं<br>
+        नशिबाने भेटतात...<br>
+        पण आयुष्यभर<br>
+        आठवणीत राहतात.
+      </p>
+      <button class="btn-continue" id="continue-btn">Continue</button>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 — BEAUTIFUL EYES ============ -->
+  <section id="eyes" class="section eyes-section">
+    <div class="eye-frame" data-eye="1">
+      <img src="assets/images/eye1.jpg" alt="" class="eye-img" data-aos="zoom-out" data-aos-duration="2200">
+      <p class="eye-caption" data-aos="fade-up" data-aos-delay="400">डोळे बोलतात...<br>शब्दांची गरजच नसते.</p>
+    </div>
+    <div class="eye-frame" data-eye="2">
+      <img src="assets/images/eye2.jpg" alt="" class="eye-img" data-aos="zoom-out" data-aos-duration="2200">
+      <p class="eye-caption" data-aos="fade-up" data-aos-delay="400">या नजरेत<br>एक वेगळीच शांतता आहे.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 — FRIENDSHIP LETTER ============ -->
+  <section id="letter" class="section letter-section">
+    <h2 class="section-title" data-aos="fade-down">पत्र, मनातलं</h2>
+    <div class="envelope-wrap" id="envelope-wrap" data-aos="fade-up">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front-left"></div>
+        <div class="envelope-front-right"></div>
+        <div class="envelope-seal">❤</div>
+      </div>
+      <div class="letter-paper" id="letter-paper">
+        <p class="letter-text" id="letter-text"></p>
+      </div>
+      <p class="envelope-hint" id="envelope-hint">पत्र उघडण्यासाठी टॅप कर</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 — ELEGANCE IN SAREE ============ -->
+  <section id="saree" class="section saree-section">
+    <h2 class="section-title" data-aos="fade-down">Elegance, अगदी साधेपणात</h2>
+    <div class="saree-slider" id="saree-slider">
+      <div class="saree-track" id="saree-track">
+        <div class="saree-slide"><div class="glass-photo"><img src="assets/images/saree1.jpg" alt=""><div class="reflection"></div></div><p>साधेपणातली खरी सुंदरता.</p></div>
+        <div class="saree-slide"><div class="glass-photo"><img src="assets/images/saree2.jpg" alt=""><div class="reflection"></div></div><p>Elegance never needs attention.</p></div>
+        <div class="saree-slide"><div class="glass-photo"><img src="assets/images/saree3.jpg" alt=""><div class="reflection"></div></div><p>काही सौंदर्य सांगावं लागत नाही.</p></div>
+        <div class="saree-slide"><div class="glass-photo"><img src="assets/images/saree4.jpg" alt=""><div class="reflection"></div></div><p>नजाकत ही तिच्या चालण्यातच आहे.</p></div>
+        <div class="saree-slide"><div class="glass-photo"><img src="assets/images/saree5.jpg" alt=""><div class="reflection"></div></div><p>ग्रेस इज अ लँग्वेज, आणि ती ती फ्लुएंटली बोलते.</p></div>
+      </div>
+      <div class="saree-controls">
+        <button id="saree-prev" aria-label="Previous">‹</button>
+        <div class="saree-dots" id="saree-dots"></div>
+        <button id="saree-next" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 — SPECIAL WORDS ============ -->
+  <section id="words" class="section words-section">
+    <h2 class="section-title" data-aos="fade-down">काही खास शब्द</h2>
+    <div class="words-stage" id="words-stage">
+      <div class="word-card active">माझ्या वरणातलं तूप ❤️</div>
+      <div class="word-card">माझी पुरणपोळी</div>
+      <div class="word-card">माझ्या चहातली साखर</div>
+      <div class="word-card">माझी जिलबी</div>
+      <div class="word-card">माझा मोदक</div>
+      <div class="word-card">माझी बासुंदी</div>
+      <div class="word-card">माझी चांदणी</div>
+      <div class="word-card">माझी सखी</div>
+      <div class="word-card">माझं हसू</div>
+      <div class="word-card">माझी खास व्यक्ती</div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7 — WHY YOU ARE SPECIAL ============ -->
+  <section id="why" class="section why-section">
+    <h2 class="section-title" data-aos="fade-down">तू खास का आहेस</h2>
+    <div class="why-grid">
+      <div class="why-card" data-aos="fade-up" data-aos-delay="0"><span class="why-icon">☺</span><p>तुझं हसू</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="60"><span class="why-icon">✿</span><p>तुझा साधेपणा</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="120"><span class="why-icon">✦</span><p>तुझी काळजी</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="180"><span class="why-icon">☘</span><p>तुझा स्वभाव</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="240"><span class="why-icon">☀</span><p>तुझी सकारात्मकता</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300"><span class="why-icon">❦</span><p>तुझी मैत्री</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="360"><span class="why-icon">❁</span><p>तुझी निरागसता</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="420"><span class="why-icon">☾</span><p>तुझी शांतता</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="480"><span class="why-icon">✧</span><p>तुझी ऊर्जा</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="540"><span class="why-icon">♛</span><p>तुझं व्यक्तिमत्त्व</p></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 8 — MUSIC PLAYER (floating) ============ -->
+  <div class="music-player" id="music-player">
+    <button id="music-toggle" class="music-toggle" aria-label="Play music">
+      <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="icon-pause" viewBox="0 0 24 24" hidden><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="music-info">
+      <div class="music-title">आठवणींचं गाणं</div>
+      <input type="range" id="music-progress" value="0" min="0" max="100" step="0.1">
+    </div>
+    <div class="music-volume">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+      <input type="range" id="music-volume" value="70" min="0" max="100">
+    </div>
+    <audio id="bg-audio" src="assets/music/music.mp3" loop preload="none"></audio>
+  </div>
+
+  <!-- ============ SECTION 10 — FINAL SCENE ============ -->
+  <section id="finale" class="section finale-section">
+    <div class="finale-heart" id="finale-heart">❤</div>
+    <p class="finale-text" id="finale-text"></p>
+    <p class="finale-sub" id="finale-sub"></p>
+    <div class="finale-signature" data-aos="fade-up" data-aos-delay="300">
+      <p class="made-for">Made Especially For</p>
+      <p class="tanu-name">Tanu</p>
+      <p class="from-name">— Yuvraj</p>
+    </div>
+  </section>
+
+</main>
+
+<canvas id="confetti-canvas"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="script.js"></script>
+</body>
+</html>
